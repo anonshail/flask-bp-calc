@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+  background-image: url('https://walrus-assets.s3.amazonaws.com/img/AdamsNeilson_NarrativeMedicine_735.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+form {
+  display: inline-block;
+  font-size: 30px;
+}
+
+input {
+  margin: 10px;
+}
+
+.textbox {
+  width: 300px;
+  height: 30px;
+}
+
+.button {
+  width: 130px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.heading {
+  font-size: 50px;
+  color: rgb(33 36 88);
+}
+
+.sub-heading {
+  font-size: 30px;
+  color: rgb(33 36 88);
+}
+
+.card {
+  padding: 30px;
+}
+
+.validation {
+  color: #B94A48;
+}

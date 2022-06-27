@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Preassure Calculator</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+
+  <script>
+    function validate() {
+      document.getElementById('validation').innerHTML = ""
+      age = document.getElementById('Age').value;
+      weight = document.getElementById('Weight').value;
+      console.log(age, weight)
+      if(isNaN(age) || age=="") {
+        document.getElementById('validation').innerHTML+="<li>Age: Should be a number</li>"
+        console.log('is this working')
+      }
+
+      if(isNaN(weight) || weight=="") {
+        document.getElementById('validation').innerHTML+="<li>Weight: Should be a number</li>"
+      }
+
+    }
+  </script>
+
+</head>
+
+<body">
+    <h1 class="text-align-center heading">Blood preassure predictor</h1>
+    <h2 class="text-align-center sub-heading">Fill out the form to get your Blood Pressure estimate</h2>
+  
+    <form action="/" method="GET" class="card">
+      <div>
+        <input type="number" name="Age" id="Age" placeholder="Age" class="textbox" required>
+      </div>
+      <div>
+        <input type="number" name="Weight" id="Weight" placeholder="Weight" class="textbox" required>
+      </div>
+      <div>
+        <span>
+          <input type="submit" value="Calculate!" class="button" onclick="validate()">
+          <input type="reset" value="Clear" class="button">
+        </span>
+      </div>
+
+      <div>
+        {{bpVal}}
+      </div>
+
+      <ul class="validation" id="validation"></ul>
+
+    </form>
+
+</body>
+</html>
